@@ -1,0 +1,251 @@
+<div class="main">
+    <div class="sidebar">
+        <div class="zero">
+            <mat-icon class="icons" (click)="toggleSidebar()">home</mat-icon>
+        </div>
+        <div class="image">
+
+            <img src="../../assets/image/D_H_Social_JPEG_120-x-120.jpg" alt="" class="img2" />
+        </div>
+        <div class="mid" *ngIf="isSidebarOpen">
+            <div class="list" (mouseenter)="fun($event)" (mouseleave)="fun1($event)">
+                <div class="onlyshadow"></div>
+
+                <div class="list1">
+                    <mat-icon class="buttons"  (click)="toggleSidebar()">home </mat-icon>
+
+                    <h3 @textFade *ngIf="showIcon" class="texticon">HOME</h3>
+                </div>
+                <div class="list1">
+                    <mat-icon class="buttons" (click)="toggleSidebar()">search</mat-icon>
+
+                    <h3 @textFade *ngIf="showIcon" class="texticon">SEARCH</h3>
+                </div>
+                <div class="list1">
+                    <mat-icon class="buttons" (click)="toggleSidebar()">tv</mat-icon>
+
+                    <h3 @textFade *ngIf="showIcon" class="texticon">TV</h3>
+                </div>
+                <div class="list1">
+                    <mat-icon class="buttons" (click)="toggleSidebar()" >movies</mat-icon>
+
+                    <h3 @textFade *ngIf="showIcon" class="texticon">MOVIES</h3>
+                </div>
+                <div class="list1">
+                    <mat-icon class="buttons" (click)="toggleSidebar()">sports</mat-icon>
+                    <h3 @textFade *ngIf="showIcon" class="texticon">SPORTS</h3>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <div class="headertop">
+        <div class="header">
+            <div class="headerimg">
+                <img src="../../assets/image/OopsAbKyaDated_BB_W-103a970b-8d50-451c-9f9a-90c730447483.jpg" alt="" class="img" />
+            </div>
+            <div class="headermid">
+                <div class="headtop">
+                    <div class="imgdisney">
+                        <img src="../../assets/image/D_H_Social_JPEG_120-x-120.jpg" alt="" class="img2" />
+                    </div>
+                    <div class="textbig">
+                        <h1>Oops! Ab Kya Hoga?</h1>
+                        <h4>Disney+ Hotstar Specials</h4>
+                    </div>
+                </div>
+
+                <div class="headmid">
+                    <h2>join Roohi fun-filled rom-com</h2>
+                </div>
+                <div class="headbot">
+                    <button class="trailerbtn">Trailer</button>
+                </div>
+            </div>
+        </div>
+        <div class="headerlast">
+            <div class="second">
+                <div class="secondhead">
+                    <div class="logoimg">
+                    
+                        <img src="../../assets/image/1707996938973-t.webp" alt="" />
+                    </div>
+                    <div class="textarea">
+                        <div class="data">
+                            <h2>2025 |</h2>
+                            <h2>1CR |</h2>
+                            <h2>LIVE |</h2>
+                            <h2>IND|ENG</h2>
+                        </div>
+                        <div class="per">
+                            <h3>
+                                watch the live strem of the 3 rd ODI between India and England
+                                Lorem ipsum dolor sit amet consectetur adipisicing elit.
+                                Blanditiis nam enim nisi?
+                            </h3>
+                        </div>
+                        <div class="btnlogo">
+                            <button class="btnwatch">
+                                <mat-icon>play_arrow</mat-icon> Watch Now
+                            </button> 
+                        </div>
+                    </div>
+                </div>
+                <div class="moved">
+                    <div class="moveimg">
+                        <!-- <button id="left-arrow" class="scroll-arrow">◀</button> -->
+                        <div class="imglist">
+                            <img src="../../assets/image/1707996874028-h.webp" alt="" class="img5" />
+                            <img src="../../assets/image/1736922330209-h.avif" alt="" class="img5" />
+                            <img src="../../assets/image/1739276162209-h.avif" alt="" class="img5" />
+                            <img src="../../assets/image/1739281298468-h.avif" alt="" class="img5" />
+                            <img src="../../assets/image/1739341674498-h.avif" alt="" class="img5" />
+                            <img src="../../assets/image/1707996874028-h.webp" alt="" class="img5" />
+                            <img src="../../assets/image/1707996874028-h.webp" alt="" class="img5" />
+                        </div>
+                        <!-- <button id="right-arrow" class="scroll-arrow">▶</button> -->
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="headlistimg">
+            <div class="headlistimg1">
+                <div class="imgheadinglist">
+                    <div>Popular Movies</div>
+                    <button class="btnviewall">View All</button>
+                </div>
+                <button class="prev1" (click)="scrollLeft()">&#10094;</button>
+                <div class="image2" #scrollContainer>
+                    <div class="hoverbox" *ngFor="let image of allimages">
+                        <div (mouseenter)="same($event)">
+                            <div>
+                                <div class="imagehover">
+                                    <div >
+                                        <img [src]="image.image" alt="" class="img4 img3" />
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        <div (mouseleave)="same1($event)">
+                            <div  *ngIf="showIcon1">
+                                <div class="hoverimage">
+                                    <img [src]="image.image" alt="" class="img6" />
+                                    <div class="hovermsg">
+                                        <button class="headbot">Watch Now</button>
+                                        <h5 >Roohi</h5>
+                                        <h6>Comedy, Horror</h6>
+                                        <h5>2021</h5>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <button class="next1" (click)="scrollRight()">&#10095;</button>
+              </div>
+            <div class="headlistimg1">
+                <div class="imgheadinglist">
+                    <div>Popular Movies</div>
+                    <button class="btnviewall">View All</button>
+                </div>
+                <button class="prev1" (click)="scrollLeft1()">&#10094;</button>
+                <div class="image2" #scrollContainer1>
+                    <div class="hoverbox" *ngFor="let image of allimages">
+                        <div (mouseenter)="same($event)">
+                            <div>
+                                <div class="imagehover">
+                                    <div >
+                                        <img [src]="image.image" alt="" class="img4 img3" />
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        <div (mouseleave)="same1($event)">
+                            <div  *ngIf="showIcon1">
+                                <div class="hoverimage">
+                                    <img [src]="image.image" alt="" class="img6" />
+                                    <div class="hovermsg">
+                                        <button class="headbot">Watch Now</button>
+                                        <h5 >Roohi</h5>
+                                        <h6>Comedy, Horror</h6>
+                                        <h5>2021</h5>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <button class="next1" (click)="scrollRight1()">&#10095;</button>
+            </div>
+            <div class="headlistimg1">
+                <div class="imgheadinglist">
+                    <div>Popular Movies</div>
+                    <button class="btnviewall">View All</button>
+                </div>
+                <button class="prev1" (click)="scrollLeft2()">&#10094;</button>
+                <div class="image2" #scrollContainer2>
+                    <div class="hoverbox" *ngFor="let image of allimages">
+                        <div (mouseenter)="same($event)">
+                            <div>
+                                <div class="imagehover">
+                                    <div >
+                                        <img [src]="image.image" alt="" class="img4 img3" />
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        <div (mouseleave)="same1($event)">
+                            <div  *ngIf="showIcon1">
+                                <div class="hoverimage">
+                                    <img [src]="image.image" alt="" class="img6" />
+                                    <div class="hovermsg">
+                                        <button class="headbot">Watch Now</button>
+                                        <h5 >Roohi</h5>
+                                        <h6>Comedy, Horror</h6>
+                                        <h5>2021</h5>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>    
+                <button class="next1" (click)="scrollRight2()">&#10095;</button>
+            </div>
+            <div class="headlistimg1">
+                <div class="imgheadinglist">
+                    <div>Popular Movies</div>
+                    <button class="btnviewall">View All</button>
+                </div>
+                <button class="prev1" (click)="scrollLeft3()">&#10094;</button>
+                <div class="image2" #scrollContainer3>
+                    <div class="hoverbox" *ngFor="let image of allimages">
+                        <div (mouseenter)="same($event)">
+                            <div>
+                                <div class="imagehover">
+                                    <div >
+                                        <img [src]="image.image" alt="" class="img4 img3" />
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        <div (mouseleave)="same1($event)">
+                            <div  *ngIf="showIcon1">
+                                <div class="hoverimage">
+                                    <img [src]="image.image" alt="" class="img6" />
+                                    <div class="hovermsg">
+                                        <button class="headbot">Watch Now</button>
+                                        <h5 >Roohi</h5>
+                                        <h6>Comedy, Horror</h6>
+                                        <h5>2021</h5>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>  
+                <button class="next1" (click)="scrollRight3()">&#10095;</button>
+            </div>
+            
+        </div>
+        
+     

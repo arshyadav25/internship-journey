@@ -1,0 +1,357 @@
+p {
+  margin-bottom: 0%;
+}
+
+$mobile-breakpoint: 800px;
+$tablet-breakpoint: 1024px;
+$primary-color: #e50914;
+$dark-bg: #000;
+$text-color: #fff;
+
+@mixin flex-center {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.main {
+  position: relative;
+  width: 100vw;
+  height: 100vh;
+  overflow-x: hidden; 
+  background: $dark-bg;
+  color: $text-color;
+
+  .imagemain {
+    height: 63%;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    background-image: url(../../assets/netflix.D.image/arsh.jpg);
+    background-repeat: no-repeat;
+    background-attachment: fixed;
+    background-position: center;
+    background-size: cover;
+  }
+}
+
+.navbar {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 1rem 2%;
+  position: fixed;
+  top: 0;
+  width: 100%;
+  z-index: 1000;
+  transition: all 0.3s ease-in-out;
+  background: linear-gradient(
+    to bottom,
+    rgba(0, 0, 0, 0.7) 0%,
+    rgba(0, 0, 0, 0) 100%
+  );
+
+  @media (max-width: $mobile-breakpoint) {
+    padding: 0.5rem 3%;
+    background: $dark-bg;
+  }
+
+  &.scrolled {
+    background: $dark-bg;
+    box-shadow: 0 2px 10px rgba(0, 0, 0, 0.5);
+  }
+
+  .logo {
+    width: 120px;
+    min-width: 90px;
+
+    img {
+      width: 100%;
+      height: auto;
+    }
+  }
+
+  .navhome {
+    display: flex;
+    gap: 1.5rem;
+    margin-left: 2rem;
+
+    @media (max-width: $tablet-breakpoint) {
+      display: none;
+    }
+
+    div {
+      cursor: pointer;
+      transition: opacity 0.3s;
+      font-size: 0.9rem;
+
+      &:hover {
+        opacity: 0.8;
+      }
+    }
+  }
+
+  .search {
+    @include flex-center;
+    gap: 1.5rem;
+
+    mat-icon {
+      cursor: pointer;
+      font-size: 1.5rem;
+    }
+
+    @media (max-width: $mobile-breakpoint) {
+      gap: 1rem;
+
+      mat-icon {
+        font-size: 1.2rem;
+      }
+    }
+  }
+  // .search1{
+  //  &:active {
+  //     display: none;
+  //   }
+  // }
+}
+
+
+.secondmain {
+  padding: 8rem 4% 2rem;
+  position: relative;
+  z-index: 2;
+
+  @media (max-width: $mobile-breakpoint) {
+    display: flex;
+    background: #000000;
+    justify-content: center;
+    padding: 6rem 4% 2rem;
+  }
+
+  .mid {
+    padding: 1rem;
+    border-radius: 20px;
+
+    max-width: 476px;
+    width: 100%;
+    @media (max-width: $mobile-breakpoint) {
+      border: 2px solid white;
+    }
+
+    .imagedes {
+      display: none;
+
+      @media (max-width: $mobile-breakpoint) {
+        display: block;
+        margin-bottom: 1.5rem;
+
+        img {
+          width: 100%;
+          height: auto;
+          border-radius: 8px;
+        }
+      }
+    }
+
+    .logoname {
+      display: flex;
+      align-items: center;
+      gap: 0.5rem;
+      margin-bottom: 1.5rem;
+
+      .red {
+        color: $primary-color;
+        font-size: 2.5rem;
+        font-weight: 700;
+      }
+
+      .whirt {
+        font-size: 1.2rem;
+        letter-spacing: 2px;
+      }
+    }
+
+    .ground {
+      display: flex;
+      align-items: center;
+      gap: 1rem;
+      margin-bottom: 1rem;
+
+      .toprating {
+        @include flex-center;
+        flex-direction: column;
+        width: 40px;
+        height: 40px;
+        background: $primary-color;
+        border-radius: 4px;
+        font-weight: 700;
+      }
+    }
+
+    .shortnote {
+      margin: 1.5rem 0;
+      line-height: 1.5;
+      opacity: 0.9;
+      max-width: 500px;
+
+      @media (max-width: $mobile-breakpoint) {
+        display: none;
+      }
+    }
+  }
+}
+
+.playbutton {
+  display: flex;
+  gap: 1rem;
+  margin-top: 2rem;
+
+  .play,
+  .more {
+    @include flex-center;
+    padding: 0.8rem 2rem;
+    border-radius: 4px;
+    font-weight: 600;
+    cursor: pointer;
+    transition: all 0.3s ease;
+    border: none;
+
+    @media (max-width: $mobile-breakpoint) {
+      padding: 0.6rem 1.5rem;
+      font-size: 0.9rem;
+    }
+
+    &:hover {
+      opacity: 0.8;
+      transform: scale(1.05);
+    }
+  }
+
+  .play {
+    background: $text-color;
+    color: $dark-bg;
+  }
+
+  .more {
+    background: rgba(255, 255, 255, 0.2);
+    color: $text-color;
+    backdrop-filter: blur(4px);
+  }
+}
+
+// Movie Rows
+.movie1 {
+  position: relative;
+  margin: 1rem 0;
+  padding: 0 4%;
+
+  .notess {
+    font-size: 1.4rem;
+    margin-bottom: 1rem;
+    font-weight: 600;
+  }
+
+  .row1 {
+    position: relative;
+    width: 100%;
+    overflow-x: auto;
+    scroll-behavior: smooth;
+    -ms-overflow-style: none;
+    scrollbar-width: none;
+
+    &::-webkit-scrollbar {
+      display: none;
+    }
+  }
+
+  .smallvideo1 {
+    display: flex;
+    gap: 0.5rem;
+    width: 100%;
+    padding-bottom: 1rem;
+
+    > div {
+      flex-shrink: 0;
+      width: max-content;
+      position: relative;
+
+      img {
+        width: 100%;
+        height: auto;
+        border-radius: 4px;
+        transition: transform 0.3s ease;
+
+        &:hover {
+          transform: scale(1.05);
+        }
+      }
+
+      @media (max-width: $mobile-breakpoint) {
+        width: 150px;
+      }
+    }
+  }
+}
+
+// Navigation Buttons
+.next1,
+.prev1 {
+  @include flex-center;
+  position: absolute;
+  top: 58%;
+  transform: translateY(-50%);
+  width: 40px;
+  height: 40px;
+  background: rgba(255, 255, 255, 0.2);
+  border-radius: 50%;
+  backdrop-filter: blur(4px);
+  cursor: pointer;
+  z-index: 10;
+  transition: all 0.3s ease;
+
+  &:hover {
+    background: rgba(255, 255, 255, 0.3);
+  }
+
+  mat-icon {
+    font-size: 1.2rem;
+  }
+}
+
+.next1 {
+  right: 2%;
+  @media(min-width:$mobile-breakpoint) {
+    right: 4%;
+  }
+}
+
+.prev1 {
+  left: 2%;
+  @media(min-width:$mobile-breakpoint) {
+    left: 4%;
+  }
+}
+
+@media (max-width: $mobile-breakpoint) {
+  .next1,
+  .prev1 {
+    width: 35px;
+    height: 35px;
+
+    mat-icon {
+      font-size: 1rem;
+    }
+  }
+}
+.search2{
+  display: flex ;
+      align-items: center;
+  
+     
+      [type=text],
+      label {
+          outline: 0 !important;
+          box-shadow: none !important;
+          border-color: black !important;
+      }
+}

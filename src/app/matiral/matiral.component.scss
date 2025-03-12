@@ -1,0 +1,95 @@
+@keyframes fadeInUp {
+    0% {
+        opacity: 0;
+        transform: translateY(100px);
+    }
+
+    100% {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+@keyframes fadeInUp {
+    0% {
+        opacity: 0;
+        transform: translateY(50px);
+    }
+
+    100% {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+h2,
+h3 {
+    margin-bottom: 0%;
+}
+.first{
+    
+ 
+      
+    &.animated {
+        animation: fadeInUp 1.5s ease-out;
+    }
+
+
+
+}
+.image {
+    display: flex;
+    overflow: auto;
+
+}
+
+h3 {
+    color: var(--yt-spec-text-primary);
+    font-family: "Roboto", "Arial", sans-serif;
+    font-size: 12px;
+    line-height: 1.2rem;
+    overflow: hidden;
+    max-height: 4.4rem;
+    -webkit-line-clamp: 2;
+    line-clamp: 2;
+    display: box;
+    display: -webkit-box;
+    padding-top: 10px;
+    -webkit-box-orient: vertical;
+}
+
+h2 {
+    font-size: large;
+    padding-top: 10px;
+}
+
+.button1 {
+    background: rgb(224, 212, 212);
+    border-radius: 10px;
+
+    &:hover {
+        background: rgb(172, 125, 125);
+    }
+}
+.viewmore{
+    text-align: center;
+    h3{
+        font-size: large;
+        
+    }
+    h5{
+        font-size: small;
+    }
+}
+//dialog box//
+.main_dialog{
+    position: relative;
+    .alloption{
+        width: 100%;
+    }
+}
+.close_dialog{
+    position: absolute;
+    right: 0;
+    top: 0;
+}

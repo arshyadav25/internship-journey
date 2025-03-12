@@ -1,0 +1,23 @@
+<div   @dialogAnimation>
+  <div class="main_dialog" >
+    <div class="container">
+      <div class="row">
+        <div class="col-md-12 d-flex flex-column align-items-center">
+          <h4>{{same.brand}}</h4>
+          <img [src]="same.thumbnail" alt=""   loading="lazy">
+        <h5 class="text-success">  {{same.availabilityStatus}}</h5>
+          {{same.description}}
+         <div class="alloption">
+          <h5 class="">Price: <span class="text">{{same.price}}$</span></h5>  
+          <h5>delivery  :{{same.shippingInformation}}</h5>
+          <h5>Rating: {{same.rating}}</h5>
+         </div>
+        </div>
+      </div>
+    </div>
+    <div class="close_dialog" (click)="closeDialog()">
+      <mat-icon class="mat-18">close</mat-icon>
+    </div>
+  </div>
+ 
+</div>

@@ -1,0 +1,151 @@
+<div class="main">
+    <div class="imagemain">
+        <div class="navbar">
+            <div class="logo" *ngIf="!isSidebarOpen">
+                <img src="../../assets/netflix.D.image/NetflixLogo@2x.png" alt="" style="width: 100%" />
+            </div>
+            <div class="topnav">
+                <div class="navhome">
+                    <div>Home</div>
+                    <div>TV Shows</div>
+                    <div>Movies</div>
+                    <div>New & Popular</div>
+                    <div>My List</div>
+                    <div>Browes by Languages</div>
+                </div>
+            </div>
+            <div class="search">
+            <div class="search2">
+                <input type="text" placeholder="search" style="color: black; border-radius: 20px;"   *ngIf="isSidebarOpen">
+                <mat-icon class="search1" (click)="toggleSidebar()">search</mat-icon>
+            </div>
+                <div>Kid</div>
+                <mat-icon>notifications</mat-icon>
+            </div>
+        </div>
+        <div class="secondmain">
+            <div class="mid">
+                <div class="imagedes">
+                    <img src="../../assets/netflix.h.image/arsss.avif" alt="" />
+                </div>
+                <div class="midarea">
+                    <div class="left">
+                        <div class="logoname">
+                            <div class="red">N</div>
+                            <div class="whirt">S E R I E S</div>
+                        </div>
+                        <div class="moviename"></div>
+                        <div class="trend">
+                            <div class="ground">
+                                <div class="toprating">
+                                    <p>Top</p>
+                                    <p>10</p>
+                                </div>
+                                <div class="trending">
+                                    <p>#1 in TV Shows Today</p>
+                                </div>
+                            </div>
+                            <div class="shortnote">
+                                In this HTML tutorial, you will find more than 200 examples.
+                                With our online "Try it Yourself" editor, you can edit and test
+                                each example yourself!
+                            </div>
+                        </div>
+                        <div class="playbutton">
+                            <div class="play">
+                                <!-- <mat-icon>play</mat-icon> -->
+                                <button>Play</button>
+                            </div>
+                            <div class="more">
+                                <button>More Info</button>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="videotype1">
+            <div class="movie1">
+                <button class="prev1" (click)="scrollLeft()"><mat-icon>arrow_back_ios</mat-icon></button>
+                <div class="notess">
+                    <p>Popular on Netflix</p>
+                </div>
+                <div class="row1" #scrollContainer>
+                    <div class="smallvideo1">
+                        <div class="" *ngFor="let image of allimage1">
+                            <img [src]="image.image" alt="" style="width: 100%" />
+                        </div>
+                    </div>
+                </div>
+                <button class="next1" (click)="scrollRight()"><mat-icon>arrow_forward_ios</mat-icon></button>
+            </div>
+        </div>
+        <div class="videotype1">
+            <div class="movie1">
+                <button class="prev1" (click)="scrollLeft1()"><mat-icon>arrow_back_ios</mat-icon></button>
+                <div class="notess">
+                    <p>Popular on Netflix</p>
+                </div>
+                <div class="row1" #scrollContainer1>
+                    <div class="smallvideo1">
+                        <div class="" *ngFor="let image of allimage1">
+                            <img [src]="image.image" alt="" style="width: 100%" />
+                        </div>
+                    </div>
+                </div>
+                <button class="next1"
+                    (click)="scrollRight1()"><mat-icon>arrow_forward_ios</mat-icon></button>
+            </div>
+        </div>
+        <div class="videotype1">
+            <div class="movie1">
+                <button class="prev1" (click)="scrollLeft2()"><mat-icon>arrow_back_ios</mat-icon></button>
+                <div class="notess">
+                    <p>Popular on Netflix</p>
+                </div>
+                <div class="row1" #scrollContainer2>
+                    <div class="smallvideo1">
+                        <div *ngFor="let image of allimage">
+                            <img [src]="image.image" alt="" style="width: 208px;" />
+                        </div>
+                    </div>
+                </div>
+                <button class="next1"
+                    (click)="scrollRight2()"><mat-icon>arrow_forward_ios</mat-icon></button>
+            </div>
+        </div>
+        <div class="videotype1">
+            <div class="movie1">
+                <button class="prev1" (click)="scrollLeft3()"><mat-icon>arrow_back_ios</mat-icon></button>
+                <div class="notess">
+                    <p>Popular on Netflix</p>
+                </div>
+                <div class="row1" #scrollContainer3>
+                    <div class="smallvideo1">
+                        <div class="" *ngFor="let image of allimage1" >
+                            <img [src]="image.image" alt="" style="width: 100%" />
+                        </div>
+                    </div>
+                </div> 
+                <button class="next1"
+                    (click)="scrollRight3()"><mat-icon>arrow_forward_ios</mat-icon></button>
+            </div>
+        </div>
+        <div class="videotype1"> 
+            <div class="movie1">
+                <button class="prev1" (click)="scrollLeft4()"><mat-icon>arrow_back_ios</mat-icon></button>
+                <div class="notess">
+                    <p>Popular on Netflix</p>
+                </div>
+                <div class="row1" #scrollContainer4>
+                    <div class="smallvideo1">
+                        <div class="" *ngFor="let image of allimage">
+                            <img [src]="image.image" alt=""  style="width: 208px;" />
+                        </div>
+                    </div>
+                </div>
+                <button class="next1"
+                    (click)="scrollRight4()"><mat-icon>arrow_forward_ios</mat-icon></button>
+            </div>
+        </div>
+    </div>

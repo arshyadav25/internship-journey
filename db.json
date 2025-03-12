@@ -1,0 +1,146 @@
+[
+  {
+      "url1": "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcSsWbBE4HcF_15tN0OsT0La_o-evT3_hU4vdg&s",
+      "slug": "beauty",
+      "name": "Beauty",
+      "url": "https://dummyjson.com/products/category/beauty"
+  },
+  {
+      "url1": "https://www.perfumeprice.co.uk/media/magezon/resized/1108x554/wysiwyg/Popular-Mens-Fragrances1600-x-800.webp",
+      "slug": "fragrances",
+      "name": "Fragrances",
+      "url": "https://dummyjson.com/products/category/fragrances"
+  },
+  {
+      "url1": "https://aarsunwoods.com/wp-content/uploads/2024/05/Grand-Sofa-Set-Setup-Living-Room-Furniture.jpg",
+      "slug": "furniture",
+      "name": "Furniture",
+      "url": "https://dummyjson.com/products/category/furniture"
+  },
+  {
+      "url1": "https://indian-retailer.s3.ap-south-1.amazonaws.com/s3fs-public/2024-07/grocery-list-1024x536.jpg",
+      "slug": "groceries",
+      "name": "Groceries",
+      "url": "https://dummyjson.com/products/category/groceries"
+  },
+  {
+      "url1": "https://www.qualcondreams.com/in/wp-content/uploads/2019/10/fd97f0c9100644e526c5b84702d53692.jpg",
+      "slug": "home-decoration",
+      "name": "Home Decoration",
+      "url": "https://dummyjson.com/products/category/home-decoration"
+  },
+  {
+      "url1": "https://static.toiimg.com/thumb/msid-85200792,width-1070,height-580,imgsize-122228,resizemode-75,overlay-toi_sw,pt-32,y_pad-40/photo.jpg",
+      "slug": "kitchen-accessories",
+      "name": "Kitchen Accessories",
+      "url": "https://dummyjson.com/products/category/kitchen-accessories"
+  },
+  {
+      "url1": "https://i.rtings.com/assets/pages/IxCXzynA/best-apple-laptops-20241009-medium.jpg?format=auto",
+      "slug": "laptops",
+      "name": "Laptops",
+      "url": "https://dummyjson.com/products/category/laptops"
+  },
+  {
+      "url1": "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQzMovHW7V-V4ft-Q6AXnpATJ2psW8juR7BVw&s",
+      "slug": "mens-shirts",
+      "name": "Mens Shirts",
+      "url": "https://dummyjson.com/products/category/mens-shirts"
+  },
+  {
+      "url1": "https://images.pexels.com/photos/267301/pexels-photo-267301.jpeg?cs=srgb&dl=pexels-pixabay-267301.jpg&fm=jpg",
+      "slug": "mens-shoes",
+      "name": "Mens Shoes",
+      "url": "https://dummyjson.com/products/category/mens-shoes"
+  },
+  {
+      "url1": "https://sylvi.in/cdn/shop/articles/Top_5_Men_s_Watches_You_Must_Buy_webp_1600x.webp?v=1726908879",
+      "slug": "mens-watches",
+      "name": "Mens Watches",
+      "url": "https://dummyjson.com/products/category/mens-watches"
+  },
+  {
+      "url1": "https://mytantrastore.com/cdn/shop/articles/Pink-and-Purple-Sporty-Gradient-Fitness-YouTube-Thumbnail-1.jpg?v=1638812289",
+      "slug": "mobile-accessories",
+      "name": "Mobile Accessories",
+      "url": "https://dummyjson.com/products/category/mobile-accessories"
+  },
+  {
+      "url1": "https://upload.wikimedia.org/wikipedia/commons/thumb/2/2e/Norton_Motorcycle.jpg/800px-Norton_Motorcycle.jpg",
+      "slug": "motorcycle",
+      "name": "Motorcycle",
+      "url": "https://dummyjson.com/products/category/motorcycle"
+  },
+  {
+      "url1": "https://www.shankara.com/cdn/shop/articles/affordable-skincare-routine-sensitive-skin-hero_1200x.jpg?v=1723922464",
+      "slug": "skin-care",
+      "name": "Skin Care",
+      "url": "https://dummyjson.com/products/category/skin-care"
+  },
+  {
+      "url1": "https://www.trustedreviews.com/wp-content/uploads/sites/54/2024/11/Best-smartphone-2024.jpg",
+      "slug": "smartphones",
+      "name": "Smartphones",
+      "url": "https://dummyjson.com/products/category/smartphones"
+  },
+  {
+      "url1": "https://images.jdmagicbox.com/quickquotes/listicle/listicle_1708569092834_yiyev_847x400.jpg",
+      "slug": "sports-accessories",
+      "name": "Sports Accessories",
+      "url": "https://dummyjson.com/products/category/sports-accessories"
+  },
+  {
+      "url1": "https://india.ray-ban.com/media/catalog/product/cache/f2eadc6870a6dd722df8e9a39bfe158b/0/r/0rb3719__001_31.png",
+      "slug": "sunglasses",
+      "name": "Sunglasses",
+      "url": "https://dummyjson.com/products/category/sunglasses"
+  },
+  {
+      "url1": "https://cdn.thewirecutter.com/wp-content/media/2024/05/protablets-2048px-232431.jpg?auto=webp&quality=75&width=1024",
+      "slug": "tablets",
+      "name": "Tablets",
+      "url": "https://dummyjson.com/products/category/tablets"
+  },
+  {
+      "url1": "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcRAymlXyW3L1KVz5s_RkdkYkXHBesxViwdPQg&s",
+      "slug": "tops",
+      "name": "Tops",
+      "url": "https://dummyjson.com/products/category/tops"
+  },
+  {
+      "url1": "https://www.paradise-kerala.com/blog/wp-content/uploads/2020/01/Vehicles.jpeg",
+      "slug": "vehicle",
+      "name": "Vehicle",
+      "url": "https://dummyjson.com/products/category/vehicle"
+  },
+  {
+      "url1": "https://i.ytimg.com/vi/E5uPri9KZIo/hq720.jpg?sqp=-oaymwEhCK4FEIIDSFryq4qpAxMIARUAAAAAGAElAADIQj0AgKJD&rs=AOn4CLANCsaCQq9CpC3B5rgnEcZ3HqBR3w",
+      "slug": "womens-bags",
+      "name": "Womens Bags",
+      "url": "https://dummyjson.com/products/category/womens-bags"
+  },
+  {
+      "url1": "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcRc-UlL3pB2JdhKhsulZOUCgwRxSQcvr_Abdw&s",
+      "slug": "womens-dresses",
+      "name": "Womens Dresses",
+      "url": "https://dummyjson.com/products/category/womens-dresses"
+  },
+  {
+      "url1": "https://cdn.shopify.com/s/files/1/0620/8189/files/Alice-Made-This_statement-necklaces_precision-jewellery_250b9514-257e-41da-a86c-06809ac0b656.jpg?v=1582557741",
+      "slug": "womens-jewellery",
+      "name": "Womens Jewellery",
+      "url": "https://dummyjson.com/products/category/womens-jewellery"
+  },
+  {
+      "url1": "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQcZydp0W008-slXjXIGZFZc6Hu1xuli9Rn2A&s",
+      "slug": "womens-shoes",
+      "name": "Womens Shoes",
+      "url": "https://dummyjson.com/products/category/womens-shoes"
+  },
+  {
+      "url1": "https://shop.timexindia.com/cdn/shop/articles/2.png?v=1718351785",
+      "slug": "womens-watches",
+      "name": "Womens Watches",
+      "url": "https://dummyjson.com/products/category/womens-watches"
+  }
+]
