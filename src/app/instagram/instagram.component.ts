@@ -164,11 +164,11 @@ export class InstagramComponent implements OnInit {
     this.isScrolled = scrollPosition > 1000;
   }
   scrollLeft() {
-    this.scrollContainer.nativeElement.scrollBy({ left: -100, behavior: 'smooth' });
+    this.scrollContainer.nativeElement.scrollBy({ left: -400, behavior: 'smooth' });
   }
 
   scrollRight() {
-    this.scrollContainer.nativeElement.scrollBy({ left: 100, behavior: 'smooth' });
+    this.scrollContainer.nativeElement.scrollBy({ left: 400, behavior: 'smooth' });
   }
   toggleLike(post: any) {
     post.isLiked = !post.isLiked;

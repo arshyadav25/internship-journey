@@ -4,16 +4,19 @@
       <video autoplay loop muted class="videoapi object-fit-cover border rounded">
         <source src="../../assets/api_logo/videoofapi.mp4" />
       </video>
-      <div class="row z-2 justify-content-around">
-        <div class="col-md-3">
+      <div class="row z-2 justify-content-around navbar" #navbar>
+        <div class="col-md-3 col-2">
           <img src="../../assets/api_logo/icons8-logo-75.png" alt="" class="img-fluid p-2" loading="lazy" />
         </div>
         <div class="col-md-8 align-items-center option">
           <div class="homebutton fs-6 mx-2">Home</div>
           <div class="homebutton fs-6 mx-2">Best Offer</div>
+          <div class="homebutton fs-6 mx-2">Your Order</div>  
           <div class="homebutton fs-6 mx-2">Your Order</div>
           <div class="homebutton fs-6 mx-2">Your Order</div>
-          <div class="homebutton fs-6 mx-2">Your Order</div>
+        </div>
+        <div class="col-1 homeicon">
+          <mat-icon class="mat-18">home</mat-icon>
         </div>
       </div>
 
@@ -22,7 +25,8 @@
       </div>
     </div>
   </div>
-  <div class="mid my-5 animated">
+  <div #midSection></div>
+  <div class="mid my-5 animated" >
     <div class="midtext justify-content-center d-flex my-5">
       <div class="fs-1 z-1 fw-medium 1h-lg">
         Enjoy flexibility and unbeatable rates with our city car rentals
@@ -84,7 +88,7 @@
     </div>
   </div>
   <div class="text z-1">
-    <div class="px-5">
+    <div class="px-lg-4 px-2">
       <div class="row text-center">
         <div class="col-md-4 col-lg-3 col-12 my-2 texted" *ngFor="let data of posts;let i=index" >
           <div class="col-md-12">

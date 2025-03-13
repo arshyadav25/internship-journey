@@ -5,10 +5,12 @@
       <div class="col-md-3 py-3" *ngFor="let item of alldata['products']; let i = index">
         <div class="card p-3 border shadow" *ngIf="!id" appScrollAnimation>
           <div class="image" >
-            <div class="firstmid col-md-12 col-12 d-flex justify-content-center" *ngFor="let item of item.images">
-              <img [src]="item" alt="" class="img-fulid " style="height: 301px;" loading="lazy" />
-               
-        
+              <div id="carousel{{ i }}" class="carousel slide" data-bs-ride="carousel">
+              <div class="carousel-inner">
+                <div class="carousel-item" *ngFor="let img of item.images; let first = first" [ngClass]="{ 'active': first }">
+                  <img [src]="img" class="d-block w-100" style="height: 301px;" loading="lazy" />
+                </div>
+              </div>   
             </div>
           </div>
           <div>
@@ -29,6 +31,7 @@
             </button>
           </div>
         </div>
+ 
       </div>
     </div>
   </div>
@@ -38,4 +41,5 @@
 
 
 
+ -->
 

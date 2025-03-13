@@ -129,17 +129,17 @@
             .logo {
                 text-align: center;
                 display: flex;
-                gap: 4rem;
+                gap: 2rem;
                 flex-direction: column;
 
                 .side_text {
                     display: flex;
                     flex-direction: column;
-                    gap: 2rem;
+                    gap: 1rem;
                     align-items: center;
 
                     .opt {
-                        padding: 0.5;
+                        padding: 10px;
                     }
                 }
             }
@@ -327,10 +327,9 @@
             .story_text {
                 font-size: small;
                 overflow: hidden;
-
                 -webkit-line-clamp: 1;
                 line-clamp: 1;
-                display: box;
+                // display: box;
                 display: -webkit-box;
                 -webkit-box-orient: vertical;
             }

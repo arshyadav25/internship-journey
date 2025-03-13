@@ -24,7 +24,7 @@
 
 .main {
     width: 100vw;
-    overflow: auto;
+    overflow-x: hidden;
 
     .logo {
         max-height: 600px;
@@ -43,15 +43,31 @@
             font-optical-sizing: auto;
             color: #58b4e4;
 
+            @media screen and (max-width: 800px) {
+                display: none !important;
+            }
         }
+        .homeicon{
+            @media screen and (min-width: 800px) {
+                display: none !important;
+            }
+        }
+    
 
-        .row {
+
+        .navbar {
             --bs-gutter-x: 0rem !important;
+            
             position: fixed;
             top: 0%;
-            justify-content: space-between;
             background: rgb(184, 217, 235, 0.4);
+            transition: background-color 0.5s ease-in-out;
             width: 100%;
+            justify-content: space-around;
+            @media screen and (max-width: 800px) {
+             justify-content: space-between !important;
+             --bs-navbar-padding-y: 0rem !important;
+            }
 
             div {
                 display: flex;
@@ -76,38 +92,29 @@
             &.animated {
                 animation: fadeInUp 1s ease-in-out;
             }
+
             position: absolute;
             top: 43%;
             left: 2%;
             max-width: 34%;
             color: rgb(41 63 76 / 50%);
+            @media screen and (max-width: 800px) {
+                max-width: 90%;
+            }
         }
     }
 
-    .text {
+    
         .texted {
-            transition: all 1s ease-in-out;
+            img {
+                transition: transform 1.5s ease-in-out;
+            }
 
             &:hover img {
                 transform: scale(1.1);
-
-                transition: transform 1.5s ease-in-out;
-
             }
         }
-
         position: absolute;
-
-        .fade-in-up {
-            opacity: 0;
-            transform: translateY(50px);
-            transition: opacity 0.6s ease-in-out, transform 0.6s ease-in-out;
-
-            &.visible {
-                opacity: 1;
-                transform: translateY(0);
-            }
-        }
 
         .card {
             background: #dfdfdf;
@@ -127,12 +134,8 @@
         }
     }
 
-    .card {
-        &:hover {
-            transform: scale(1.05);
-        }
-    }
-}
+  
+
 
 .mid {
     transition: background-color 1s ease;
@@ -150,9 +153,17 @@
     }
 
     .mid_card {
-        .card {
-            text-align: center;
-            align-items: center;
+        
+     
+            .card {
+                text-align: center;
+                align-items: center;
+                transition: transform 1s ease-in-out;
+                &:hover {
+                    transform: scale(1.2);
+                    z-index: 1;
+                }
+            
 
         }
 
