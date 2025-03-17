@@ -12,6 +12,20 @@ export class ApiComponent implements OnInit {
 
   @ViewChild('navbar') navbar: ElementRef;
   @ViewChild('midSection') midSection: ElementRef;
+  common=[
+    {img:'https://cdn.prod.website-files.com/66dc179a1d6aa88848a4efac/6792312eb7130ce42ca98c25_feature-01.svg',
+      title:'Well maintained vehicles',
+      desc:'  All our cars are well-maintained and regularly serviced,ensuring safe and smooth driving.'},
+    {img:'https://cdn.prod.website-files.com/66dc179a1d6aa88848a4efac/67502a4db4828ad6c7f95f47_feature-04.svg',
+      title:'Well maintained vehicles',
+      desc:'  All our cars are well-maintained and regularly serviced,ensuring safe and smooth driving.'},
+    {img:'https://cdn.prod.website-files.com/66dc179a1d6aa88848a4efac/67502a4da12a058ea3436e0e_feature-03.svg',
+      title:'Well maintained vehicles',
+      desc:'  All our cars are well-maintained and regularly serviced,ensuring safe and smooth driving.'},
+    {img:'https://cdn.prod.website-files.com/66dc179a1d6aa88848a4efac/67502a4df18d537616f62575_feature-02.svg',
+      title:'Well maintained vehicles',
+      desc:'  All our cars are well-maintained and regularly serviced,ensuring safe and smooth driving.'},
+  ]
   
   constructor(private data: SerivesService, private router: Router) { }
 
@@ -47,18 +61,12 @@ export class ApiComponent implements OnInit {
     const midPosition = midSectionElement.getBoundingClientRect().top;
 
     if (midPosition <= 0) {
-      // When the mid section reaches the top of the viewport
-      navbarElement.style.background = 'rgba(184, 217, 235, 1)'; // Solid background
+     
+      navbarElement.style.background = 'rgba(184, 217, 235, 1)'; 
     } else {
-      navbarElement.style.background = 'rgba(184, 217, 235, 0.4)'; // Transparent background
+      navbarElement.style.background = 'rgba(184, 217, 235, 0.4)'; 
     }
   }
-  // api.component.ts
-// submit(dataUrl: string) {
-//   this.router.navigate(['/matiral'], {
-//     queryParams: { name: dataUrl }
-//   });
-// }
-  
+ 
 }
 

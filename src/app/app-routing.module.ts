@@ -16,7 +16,6 @@ const routes: Routes = [
   {path:'routing',component:RoutingComponent},
   {path:'api',component:ApiComponent},
   {path:'instagram',component:InstagramComponent},
-
   {path:'matiral',component:MatiralComponent},
  
  

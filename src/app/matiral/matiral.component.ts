@@ -91,6 +91,8 @@ export class MatiralComponent implements OnInit {
   ],
 })
 export class DialogComponent implements OnInit {
+ 
+  
   same:any;
   constructor(@Inject(MAT_DIALOG_DATA) public data: any, public dialogRef: MatDialogRef<DialogComponent>) {
     console.log(data)
@@ -102,7 +104,7 @@ export class DialogComponent implements OnInit {
   closeDialog() {
     this.dialogRef.close();
   }
- 
 
+ 
 
 }

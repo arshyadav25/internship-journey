@@ -27,6 +27,7 @@ import { ScrollAnimationDirective } from './scroll-animation.directive';
 import { InstagramComponent } from './instagram/instagram.component';
 
 
+
 @NgModule({
   declarations: [
     AppComponent,
@@ -38,7 +39,8 @@ import { InstagramComponent } from './instagram/instagram.component';
     MatiralComponent,
     ScrollAnimationDirective,
     InstagramComponent,
-    DialogComponent
+    DialogComponent,
+    
   ],
   imports: [
     BrowserModule,
@@ -57,8 +59,7 @@ import { InstagramComponent } from './instagram/instagram.component';
     MatToolbarModule,
     MatDatepickerModule,
     HttpClientModule,
-    MatDialogModule,
-    
+    MatDialogModule,    
   ],
   exports:[
     MatIconModule,  
@@ -75,7 +76,7 @@ import { InstagramComponent } from './instagram/instagram.component';
     MatDatepickerModule,
     HttpClientModule,
     MatDialogModule,
-  ],
+    ],
   providers: [{provide:MAT_DIALOG_DATA,useValue:{}},{provide:MatDialogRef,useValue:{}}],
   bootstrap: [AppComponent]
 })

@@ -1,14 +1,16 @@
 <div #main class="container" *ngIf="alldata" >
+
   <div class="first animated">
-    {{alldata['products'].category}}
+
     <div class="row ">
       <div class="col-md-3 py-3" *ngFor="let item of alldata['products']; let i = index">
+   
         <div class="card p-3 border shadow" *ngIf="!id" appScrollAnimation>
           <div class="image" >
               <div id="carousel{{ i }}" class="carousel slide" data-bs-ride="carousel">
               <div class="carousel-inner">
                 <div class="carousel-item" *ngFor="let img of item.images; let first = first" [ngClass]="{ 'active': first }">
-                  <img [src]="img" class="d-block w-100" style="height: 301px;" loading="lazy" />
+                  <img [src]="img" class="d-block w-100" style="max-height: 280px;" loading="lazy" />
                 </div>
               </div>   
             </div>
@@ -22,24 +24,22 @@
             <h3>Brand: {{ item.brand }}</h3>
             <h3>Price: {{ item.price }} $</h3>
             <h3>Tags: {{ item.tags }}</h3>
-            <h3>Category: {{ item.category }}</h3>
             <h3>{{ item.description }}..</h3>
           </div>
-          <div class="col-md-12">
-            <button class="button1 p-2 border" type="button" (click)="viewmore(item)">
+          <div class="col-md-12 pt-2">
+            <button class="button1 py-1 px-3 " type="button" (click)="viewmore(item)">
               View More
             </button>
           </div>
+          <div class="col-md-12 pt-2">
+            <button class="button1 py-1 px-3 " type="button" (click)="viewmore(item)">
+         cast
+            </button>
+          </div>
+
         </div>
  
       </div>
     </div>
   </div>
 </div>
-
-
-
-
-
- -->
-
