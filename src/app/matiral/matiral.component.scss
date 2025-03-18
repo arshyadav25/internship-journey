@@ -22,27 +22,81 @@
     }
 }
 
+.logo {
+    max-height: 600px;
+    width: 100%;
+    height: fit-content;
+    position: fixed;
+    position: relative;
+
+    .option {
+        font-family: var(--f-font-sans, '__figmaSans_a26a19', '__figmaSans_Fallback_a26a19', SF Pro Display, system-ui, helvetica, sans-serif);
+        font-optical-sizing: auto;
+        color: #58b4e4;
+
+        @media screen and (max-width: 800px) {
+            display: none !important;
+        }
+    }
+
+    .homeicon {
+        @media screen and (min-width: 800px) {
+            display: none !important;
+        }
+    }
+
+    .navbar {
+        background: rgb(184, 217, 235);
+
+        div {
+            display: flex;
+
+        }
+    }
+
+    .homebutton {
+        padding: 10px;
+        background: rgb(184, 217, 235, 0.5);
+        border-radius: 10px;
+
+        &:hover {
+            background: rgb(184, 217, 235);
+            color: #000;
+        }
+    }
+}
+
 h2,
 h3 {
     margin-bottom: 0%;
 }
 
+.main1 {
+    background: rgb(184, 217, 235, 0.5);
+    // height: 100vh;
+}
+
 .first {
-
-
 
     &.animated {
         animation: fadeInUp 1.5s ease-out;
     }
 
+    .card {
+        position: relative;
+
+        transition: box-shadow 0.5s ease-in-out;
 
 
+        &:hover {
+            box-shadow: #000000 0px 0px 20px 0px;
+        }
+    }
 }
 
 .image {
     display: flex;
     overflow: auto;
-
 }
 
 h3 {
@@ -73,12 +127,28 @@ h2 {
 }
 
 .button1 {
-    background: rgb(224, 212, 212);
+    background: rgb(184, 217, 235, 0.5);
     border-radius: 10px;
     font-size: small;
+    color: #58b4e4;
+
+    white-space: nowrap;
 
     &:hover {
-        background: rgb(172, 125, 125);
+        background: rgba(127, 197, 238, 0.5);
+        color: #49a9dd;
+    }
+}
+
+.button2 {
+    background: rgba(77, 94, 104, 0.5);
+    border-radius: 10px;
+    font-size: small;
+    color: #2d576e;
+
+    &:hover {
+        background: rgba(63, 96, 116, 0.5);
+        color: #000000;
     }
 }
 
@@ -87,7 +157,6 @@ h2 {
 
     h3 {
         font-size: large;
-
     }
 
     h5 {
@@ -136,4 +205,8 @@ h5 {
     border-radius: 10px;
     color: rgb(255, 255, 255);
     width: fit-content;
+}
+
+.padding {
+    padding-top: 7rem;
 }

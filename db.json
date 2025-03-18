@@ -1,4 +1,5 @@
-[
+{
+    "categories":[
   {
       "url1": "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcSsWbBE4HcF_15tN0OsT0La_o-evT3_hU4vdg&s",
       "slug": "beauty",
@@ -144,3 +145,4 @@
       "url": "https://dummyjson.com/products/category/womens-watches"
   }
 ]
+}

@@ -21,11 +21,11 @@ import { NetflixComponent } from './netflix/netflix.component';
 import { RoutingComponent } from './routing/routing.component';
 import { ApiComponent } from './api/api.component';
 import { HttpClientModule } from '@angular/common/http';
-import { MatiralComponent , DialogComponent} from './matiral/matiral.component';
+import { MatiralComponent , DialogComponent, ShopComponent} from './matiral/matiral.component';
 import { MAT_DIALOG_DATA, MatDialogModule, MatDialogRef } from '@angular/material/dialog';
 import { ScrollAnimationDirective } from './scroll-animation.directive';
 import { InstagramComponent } from './instagram/instagram.component';
-
+import { MatBadgeModule } from '@angular/material/badge';
 
 
 @NgModule({
@@ -40,6 +40,8 @@ import { InstagramComponent } from './instagram/instagram.component';
     ScrollAnimationDirective,
     InstagramComponent,
     DialogComponent,
+    ShopComponent
+
     
   ],
   imports: [
@@ -59,7 +61,8 @@ import { InstagramComponent } from './instagram/instagram.component';
     MatToolbarModule,
     MatDatepickerModule,
     HttpClientModule,
-    MatDialogModule,    
+    MatDialogModule, 
+    MatBadgeModule
   ],
   exports:[
     MatIconModule,  
@@ -76,6 +79,7 @@ import { InstagramComponent } from './instagram/instagram.component';
     MatDatepickerModule,
     HttpClientModule,
     MatDialogModule,
+  
     ],
   providers: [{provide:MAT_DIALOG_DATA,useValue:{}},{provide:MatDialogRef,useValue:{}}],
   bootstrap: [AppComponent]

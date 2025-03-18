@@ -1,0 +1,7 @@
+<h2>Your Cart</h2>
+<div *ngFor="let item of cartItems" class="cart-item">
+  <h3>{{ item.title }}</h3>
+  <p>Price: {{ item.price | currency }}</p>
+  <p>Brand: {{ item.brand }}</p>
+</div>
+<button (click)="closeDialog()">Continue Shopping</button>
