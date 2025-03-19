@@ -92,6 +92,15 @@ h3 {
             box-shadow: #000000 0px 0px 20px 0px;
         }
     }
+
+    img {
+
+        transition: transform 1s ease-in-out;
+
+        &:hover {
+            transform: scale(1.2);
+        }
+    }
 }
 
 .image {
@@ -163,8 +172,7 @@ h2 {
         font-size: small;
     }
 }
-
-//dialog box//
+///////////////////////////////////////////////////////////////view more///////////////////////////////////////////////
 h5 {
     margin-bottom: 0%;
 }
@@ -209,4 +217,53 @@ h5 {
 
 .padding {
     padding-top: 7rem;
+}
+
+////////////////////////////////////////////////////////shop page//////////////////////////////////////////////
+
+.main_shop {
+    position: relative;
+    height: 100%;
+    .cart-item{
+        background: rgb(184, 217, 235, 0.4);
+        margin: 10px;
+    }
+}
+.your_cart{
+    text-align: center;
+    font-size: large;
+    color: #49a9dd;
+    height: 5%;
+    border-radius: 10px;
+    padding: 10px;
+    background: rgb(184, 217, 235);
+    width: 100%;
+}
+.button_shop {
+    height: 5%;
+    border-radius: 10px;
+    padding: 10px;
+    background: rgb(184, 217, 235);
+    width: 100%;
+    display: flex;
+    justify-content: space-around;
+    position: sticky;
+    bottom: 0px;
+    align-items: center;
+
+    button {
+        background: rgb(184, 217, 235);
+        border-radius: 10px;
+        font-size: small;
+        color: #58b4e4;
+        height: fit-content;
+        white-space: nowrap;
+        padding: 5px 20px;
+        border: 2px solid #58b4e4;
+
+        &:hover {
+            background: rgba(127, 197, 238, 0.5);
+            color: #49a9dd;
+        }
+    }
 }

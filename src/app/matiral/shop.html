@@ -1,7 +1,31 @@
-<h2>Your Cart</h2>
-<div *ngFor="let item of cartItems" class="cart-item">
-  <h3>{{ item.title }}</h3>
-  <p>Price: {{ item.price | currency }}</p>
-  <p>Brand: {{ item.brand }}</p>
+<div class="main_shop">
+  <h2 class="position-sticky top-0 your_cart">Your Cart</h2>
+  <div *ngFor="let item of cartItems" class="cart-item">
+    <div class="row align-items-center">
+      <div class="col-4">
+        <img [src]="item.images[0]" alt="item.title" />
+      </div>
+      <div class="col-md-6">
+        <h3>{{ item.title }}</h3>
+        <p>Price: {{ item.price | currency }}</p>
+        <p>Brand: {{ item.brand }}</p>
+        <p>
+          Delivery:
+          <ng-container class="text-success"> {{ item.shippingInformation }} </ng-container>
+        </p>
+        <p class="d-flex align-items-center mb-0">
+          Quantity:
+          <input type="number" placeholder="1"  style="max-width:34px; border: none; padding: 0%;"/>
+          
+        </p>
+      </div>
+      <div class="col-2">
+        <mat-icon (click)="deletecart(item)">delete</mat-icon>
+      </div>
+    </div>
+  </div>
+  <div class="button_shop">
+    <button (click)="closeDialog()">Continue Shopping</button>
+    <button (click)="closeDialog()">Buy Now</button>
+  </div>
 </div>
-<button (click)="closeDialog()">Continue Shopping</button>

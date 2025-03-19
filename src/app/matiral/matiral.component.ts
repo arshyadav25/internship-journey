@@ -6,6 +6,7 @@ import {
   MatDialog,
   MatDialogRef,
 } from '@angular/material/dialog';
+import { BehaviorSubject } from 'rxjs/internal/BehaviorSubject';
 
 @Component({
   selector: 'app-matiral',
@@ -24,14 +25,11 @@ export class MatiralComponent implements OnInit {
 
   }
 
-  count: any[] = [1, 2, 3, 4, 5];
-
   ngOnInit(): void {
     this.api.data.subscribe((a: any) => {
       console.log(a);
       localStorage.setItem('newdata', JSON.stringify(a))
       this.datas = a;
-      // this.datas = a.limit
     });
     this.datas = JSON.parse(localStorage.getItem('newdata'));
     this.api.cartItems$.subscribe(items => {
@@ -55,34 +53,25 @@ export class MatiralComponent implements OnInit {
     this.main.nativeElement.scrollTop = 10;
   }
 
-  // buynow(item) {  
-  //   console.log(item);
-  //   const dialogRef = this.preview.open(ShopComponent, {
-  //     height: '600px',
-  //     width: '900px',
-  //     data: item,
-  //   });
-  // }
-
   buynow(item: any) {
     this.api.addToCart(item);
     this.openCart();
   }
+
   openCart() {
     this.preview.open(ShopComponent, {
-      height: '600px',
+      maxHeight: '600px',
       width: '900px'
     });
   }
 
-  openDialog(templateRef) {
-    let dialogRef = this.preview.open(templateRef, {
-      width: '300px'
-    });
-  }
-
-
-
+openbuynow(item) {
+  console.log(item);
+  this.preview.open( Buynow_dialogComponent, {
+    maxHeight: '600px',
+    width: '900px'
+  });
+}
 
   cart(item: any) {
     this.api.addToCart(item);
@@ -90,7 +79,7 @@ export class MatiralComponent implements OnInit {
 
 }
 
-
+////////////////////////////////////////dialog////////////////////////////////////////////////////////////
 @Component({
   selector: 'app-dialog',
   templateUrl: './dialog.html',
@@ -108,8 +97,6 @@ export class MatiralComponent implements OnInit {
   ],
 })
 export class DialogComponent implements OnInit {
-
-
   same: any;
   constructor(@Inject(MAT_DIALOG_DATA) public data: any, public dialogRef: MatDialogRef<DialogComponent>) {
     console.log(data)
@@ -121,10 +108,8 @@ export class DialogComponent implements OnInit {
   closeDialog() {
     this.dialogRef.close();
   }
-
-
-
 }
+///////////////////////////////////////////////////////shop dialog///////////////////////////////////////////////
 @Component({
   selector: 'app-shop',
   templateUrl: './shop.html',
@@ -146,8 +131,9 @@ export class ShopComponent implements OnInit {
 
   constructor(
     public dialogRef: MatDialogRef<ShopComponent>,
-    private api: SerivesService
-  ) { }
+    private api: SerivesService,
+
+  ) {}
 
   ngOnInit() {
     this.api.cartItems$.subscribe(items => {
@@ -163,7 +149,54 @@ export class ShopComponent implements OnInit {
   closeDialog() {
     this.dialogRef.close();
   }
+  deletecart(item: any) {
+    this.cartItems = this.cartItems.filter((a) => a !== item);
+    console.log(item);
+  }
 
+}
+////////////////////////////////////////buynow dialog////////////////////////////////////////////////////////////
+@Component({
+  selector: 'app-buynow_dialog',
+  templateUrl: './buynow_dialog.html',
+  styleUrls: ['./matiral.component.scss'],
+  animations: [
+    trigger('dialogAnimation', [
+      state('void', style({ opacity: 0, transform: 'scaleX(1)' })),
+      transition(':enter', [
+        animate('3s ease-out', style({ opacity: 1, transform: 'scale(1)' })),
+      ]),
+      transition(':leave', [
+        animate('3s ease-in', style({ opacity: 0, transform: 'scale(1)' })),
+      ]),
+    ]),
+  ],
+})
+export class Buynow_dialogComponent implements OnInit {
+ 
+  items: any;
+
+  constructor(
+    public dialogRef: MatDialogRef<ShopComponent>,
+    private api: SerivesService,
+
+  ) {
+
+  }
+
+  ngOnInit() {
+    this.api.cartItems$.subscribe(items => {
+      this.items = items;
+    });
+
+    this.api.cartItems$.subscribe(items => {
+      this.items = items;
+    });
+  }
+
+  shopNow() {
+    this.dialogRef.close();
+  }
 
 
 }

@@ -21,7 +21,7 @@ import { NetflixComponent } from './netflix/netflix.component';
 import { RoutingComponent } from './routing/routing.component';
 import { ApiComponent } from './api/api.component';
 import { HttpClientModule } from '@angular/common/http';
-import { MatiralComponent , DialogComponent, ShopComponent} from './matiral/matiral.component';
+import { MatiralComponent , DialogComponent, ShopComponent,  Buynow_dialogComponent} from './matiral/matiral.component';
 import { MAT_DIALOG_DATA, MatDialogModule, MatDialogRef } from '@angular/material/dialog';
 import { ScrollAnimationDirective } from './scroll-animation.directive';
 import { InstagramComponent } from './instagram/instagram.component';
@@ -40,7 +40,9 @@ import { MatBadgeModule } from '@angular/material/badge';
     ScrollAnimationDirective,
     InstagramComponent,
     DialogComponent,
-    ShopComponent
+    ShopComponent,
+    Buynow_dialogComponent
+  
 
     
   ],

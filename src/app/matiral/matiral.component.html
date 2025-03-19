@@ -12,7 +12,7 @@
           <div class="homebutton fs-6 mx-2">Your Order</div>
           <div class="homebutton fs-6 mx-2">Your Order</div>
         </div>
-        <div class="col-1 homeicon">
+        <div class="col-3 homeicon">
           <mat-icon class="mat-18">home</mat-icon>
         </div>
         <div class="shopping col-1">
@@ -25,7 +25,7 @@
     <div class="first animated">
       <div class="row">
         <div class="col-md-4 py-3" *ngFor="let item of alldata['products']; let i = index">
-          <div class="card p-3 border  align-items-center" *ngIf="!id">
+          <div class="card p-3 border  align-items-center rounded-5" *ngIf="!id">
             <div class="image">
               <div id="carousel{{ i }}" class="carousel slide" data-bs-ride="carousel">
                 <div class="carousel-inner">
@@ -61,7 +61,7 @@
                 </button>
               </div>
               <div class="col-md-4 pt-2">
-                <button class="button2 py-1 px-3" (click)="buynow(item)">
+                <button class="button2 py-1 px-3"(click)="openbuynow(item)">
                   Buy Now
                 </button>
               </div>
@@ -73,8 +73,3 @@
   </div>
 </div>
 
-<!-- 
-<button (click)="openDialog(template)">Open my dialog</button>
-    <ng-template #template>
-     <h1>This is a message</h1>
-    </ng-template> -->
