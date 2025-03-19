@@ -7,6 +7,7 @@ import {
   MatDialogRef,
 } from '@angular/material/dialog';
 import { BehaviorSubject } from 'rxjs/internal/BehaviorSubject';
+import { BuyNowComponent } from '../buy-now/buy-now.component';
 
 @Component({
   selector: 'app-matiral',
@@ -58,20 +59,29 @@ export class MatiralComponent implements OnInit {
     this.openCart();
   }
 
+  buynow1(item: any) {
+console.log(item,"'bye now item");
+this.preview.open(BuyNowComponent, {
+width: '900px',
+height: '600px',
+data: item
+})
+  }
+
   openCart() {
     this.preview.open(ShopComponent, {
       maxHeight: '600px',
       width: '900px'
     });
   }
-
-openbuynow(item) {
-  console.log(item);
-  this.preview.open( Buynow_dialogComponent, {
-    maxHeight: '600px',
-    width: '900px'
-  });
-}
+ 
+// openbuynow(item) {
+//   console.log(item);
+//   this.preview.open( Buynow_dialogComponent, {
+//     maxHeight: '600px',
+//     width: '900px'
+//   });
+// }
 
   cart(item: any) {
     this.api.addToCart(item);
@@ -132,6 +142,7 @@ export class ShopComponent implements OnInit {
   constructor(
     public dialogRef: MatDialogRef<ShopComponent>,
     private api: SerivesService,
+    private matDialog: MatDialog
 
   ) {}
 
@@ -145,7 +156,13 @@ export class ShopComponent implements OnInit {
       this.cartItems = items;
     });
   }
-
+  buyNowShop() {
+    this.matDialog.open(BuyNowComponent, {
+      maxHeight: '600px',
+      width: '900px',
+      data: this.cartItems
+    })
+  }
   closeDialog() {
     this.dialogRef.close();
   }
@@ -153,50 +170,5 @@ export class ShopComponent implements OnInit {
     this.cartItems = this.cartItems.filter((a) => a !== item);
     console.log(item);
   }
-
-}
-////////////////////////////////////////buynow dialog////////////////////////////////////////////////////////////
-@Component({
-  selector: 'app-buynow_dialog',
-  templateUrl: './buynow_dialog.html',
-  styleUrls: ['./matiral.component.scss'],
-  animations: [
-    trigger('dialogAnimation', [
-      state('void', style({ opacity: 0, transform: 'scaleX(1)' })),
-      transition(':enter', [
-        animate('3s ease-out', style({ opacity: 1, transform: 'scale(1)' })),
-      ]),
-      transition(':leave', [
-        animate('3s ease-in', style({ opacity: 0, transform: 'scale(1)' })),
-      ]),
-    ]),
-  ],
-})
-export class Buynow_dialogComponent implements OnInit {
- 
-  items: any;
-
-  constructor(
-    public dialogRef: MatDialogRef<ShopComponent>,
-    private api: SerivesService,
-
-  ) {
-
-  }
-
-  ngOnInit() {
-    this.api.cartItems$.subscribe(items => {
-      this.items = items;
-    });
-
-    this.api.cartItems$.subscribe(items => {
-      this.items = items;
-    });
-  }
-
-  shopNow() {
-    this.dialogRef.close();
-  }
-
 
 }

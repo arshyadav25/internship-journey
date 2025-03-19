@@ -1,0 +1,30 @@
+<p>buy-now works!</p>
+{{buyNowData|json}}
+
+<div class="main_buynow">
+    <div class="container">
+        <div class="row" >
+            <div class="col-md-12 d-flex flex-column align-items-center">
+                <h4>{{ buyNowData.title }}</h4>
+                <h5 class="text-success">{{ buyNowData.availabilityStatus }}</h5>
+                <p>{{ buyNowData.description }}</p>
+                <div class="alloption">
+                    <div>
+                        <h5>Price:</h5>
+                        <span>{{ buyNowData.price }}$</span>
+                    </div>
+                    <div>
+                        <h5>delivery:</h5>
+                        <span>{{ buyNowData.shippingInformation }}</span>
+                    </div>
+                    <div>
+                        <h5>Rating:</h5>
+                        <span>{{ buyNowData.rating }}</span>
+                    </div>
+                    
+                </div>
+            </div>          
+        </div>
+    </div>
+  
+</div> 
