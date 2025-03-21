@@ -42,7 +42,7 @@ import { BuyNowComponent } from './buy-now/buy-now.component';
     InstagramComponent,
     DialogComponent,
     ShopComponent,
-    BuyNowComponent
+    BuyNowComponent,
   
 
     

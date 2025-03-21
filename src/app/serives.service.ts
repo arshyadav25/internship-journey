@@ -26,7 +26,6 @@ export class SerivesService {
   getlogindetils(): Observable<any>{
     return  this._http.get('https://dummyjson.com/c/7f99-7394-4e50-aa8e')
     // return  this._http.get(' http://localhost:3000/categories')
-    // return  this._http.get('https://dummyjson.com/c/411e-f5d6-43a7-9d16')
   }
 
   getDummyData(url){
