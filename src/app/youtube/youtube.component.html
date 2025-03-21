@@ -174,7 +174,7 @@
         </div>
 
     </div>
-     <div class="homeArea1">
+    <div class="homeArea1">
         <div class="all">
             <div class="alltype">
                 <h2>All</h2>
@@ -200,11 +200,11 @@
             </div>
         </div>
 
-     <div class="top">
+        <div class="top">
             <div class="videoArea">
                 <div class="mainVideo" *ngFor="let image of images ; let i= index">
-                    <div    class="bigimage" >
-                        <div class="imagechange" >
+                    <div class="bigimage">
+                        <div class="imagechange">
                             <img [src]="image.image" alt="" style=" border-radius: 10px;">
 
                             <h3>{{image.image1 | slice: 0: 36}}...</h3>
@@ -216,30 +216,30 @@
                         </div>
                     </div>
                 </div>
-              
+
             </div>
-           <div class="videoArea">
-                <div class="mainVideo" *ngFor="let image of images1 ; let i= index"
-                   >
-                    <div    class="bigimage" >
-                        <div class="imagechange" >
-                            <img [src]="image.image" alt="" style="max-width: 164px; border-radius: 10px; height: 100%;">
+            <div class="videoArea">
+                <div class="mainVideo" *ngFor="let image of images1 ; let i= index">
+                    <div class="bigimage">
+                        <div class="imagechange">
+                            <img [src]="image.image" alt=""
+                                style="max-width: 164px; border-radius: 10px; height: 100%;">
 
                             <h3>{{image.image1 | slice: 0: 36}}...</h3>
                             <div class="post">
 
                                 <h5>{{image.image3}}</h5>
-                        
+
                             </div>
                         </div>
                     </div>
                 </div>
-              
+
             </div>
             <div class="videoArea">
                 <div class="mainVideo" *ngFor="let image of image2 ; let i= index">
-                    <div    class="bigimage" >
-                        <div class="imagechange" >
+                    <div class="bigimage">
+                        <div class="imagechange">
                             <img [src]="image.image" alt="" style="border-radius: 10px;">
 
                             <h3>{{image.image1 | slice: 0: 36}}...</h3>
@@ -251,10 +251,9 @@
                         </div>
                     </div>
                 </div>
-              
-            </div> 
+
+            </div>
 
         </div>
     </div>
 </div>
-

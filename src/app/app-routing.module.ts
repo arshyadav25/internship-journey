@@ -7,6 +7,7 @@ import { RoutingComponent } from './routing/routing.component';
 import { ApiComponent } from './api/api.component';
 import { MatiralComponent } from './matiral/matiral.component';
 import { InstagramComponent } from './instagram/instagram.component';
+import { BuyNowComponent } from './buy-now/buy-now.component';
 
 const routes: Routes = [
   {path: '', redirectTo: '/routing', pathMatch: 'full' },
@@ -17,6 +18,8 @@ const routes: Routes = [
   {path:'api',component:ApiComponent},
   {path:'instagram',component:InstagramComponent},
   {path:'matiral',component:MatiralComponent},
+  {path:'buy-now',component:BuyNowComponent},
+
  
  
 

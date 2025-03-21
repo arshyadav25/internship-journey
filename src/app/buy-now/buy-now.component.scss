@@ -1,0 +1,111 @@
+.main {
+
+    background: rgba(184, 217, 235, 0.4);
+    max-height: 82vh;
+    position: relative;
+    overflow: hidden;
+
+    .cart-item {
+
+        margin: 10px;
+    }
+
+    .mat-stepper-horizontal {
+        background: none;
+
+    }
+
+    .loop {
+        border-radius: 20px;
+        transition: background 0.7s ease-in-out;
+        background: rgb(184, 217, 235, 0.4);
+
+        &:hover {
+            background: rgb(184, 217, 235);
+
+
+        }
+    }
+ .input_area{
+    .total{
+        display: flex;
+        justify-content: space-between;
+    }
+ }
+
+
+
+
+ .close_dialog {
+
+    width: 100%;
+display: flex;
+justify-content: end;
+
+   
+
+    button{
+    width: fit-content;
+    padding: 7px 42px;
+    background: rgba(184, 217, 235, 0.5);
+    border-radius: 10px;
+    font-size: small;
+    color: #58b4e4;
+    &:hover {
+        background: rgba(184, 217, 235, 0.8);
+    }
+}
+
+}
+}
+
+
+
+
+::ng-deep.mat-horizontal-stepper-header-container {
+    position: sticky;
+    width: 100%;
+    top: 0;
+    background: rgb(184, 217, 235);
+}
+
+::ng-deep.mat-dialog-container {
+    padding: 5px;
+}
+
+
+/////////////////////////////////////////step2////////////////////////////////////////////
+
+.main_personal{
+
+  
+       .loop_personal{
+        width: 100px;
+        height: 100px;
+        align-items: center;
+        justify-content: center;
+        display: flex;
+        border-radius: 50%;
+        border: 2px solid #58b4e4;
+        img{
+            width: max-content;
+            align-items: center;
+            transform: scale(2.1);
+        }
+    }
+    .card_option{
+        .cards{
+            .Dcard,.Ccard{
+                padding: 5px 15px;
+                h5{
+                    margin-bottom: 0px;
+                }
+            }
+        }
+    }
+    input{
+        border: none;
+        border-bottom: 1px solid #58b4e4;
+        --tw-ring-shadow:none;
+    }
+}

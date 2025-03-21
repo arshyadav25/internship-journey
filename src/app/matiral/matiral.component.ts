@@ -21,7 +21,7 @@ export class MatiralComponent implements OnInit {
   @ViewChild('main') main: ElementRef;
   dialog: any;
   cartCount: number = 0;
-
+  data: any = [];
   constructor(private api: SerivesService, private preview: MatDialog, public dialogRef: MatDialogRef<MatiralComponent>) {
 
   }
@@ -60,31 +60,41 @@ export class MatiralComponent implements OnInit {
   }
 
   buynow1(item: any) {
-console.log(item,"'bye now item");
-this.preview.open(BuyNowComponent, {
-width: '900px',
-height: '600px',
-data: item
-})
+    console.log(item, "'bye now item");
+    this.preview.open(BuyNowComponent, {
+      width: '900px',
+      maxHeight: '800px',
+      data: [item],
+    })
   }
 
   openCart() {
     this.preview.open(ShopComponent, {
       maxHeight: '600px',
-      width: '900px'
+      width: '900px',
+
     });
   }
- 
-// openbuynow(item) {
-//   console.log(item);
-//   this.preview.open( Buynow_dialogComponent, {
-//     maxHeight: '600px',
-//     width: '900px'
-//   });
-// }
+
+  // openbuynow(item) {
+  //   console.log(item);
+  //   this.preview.open( Buynow_dialogComponent, {
+  //     maxHeight: '600px',
+  //     width: '900px'
+  //   });
+  // }
 
   cart(item: any) {
+this.api.cartItems$.subscribe(items => {
+  console.log(items,"items===>");
+  if(items.some((a: any) => a.id === item.id)) {
+    
+  }else{
     this.api.addToCart(item);
+  }
+})
+  
+
   }
 
 }
@@ -144,7 +154,7 @@ export class ShopComponent implements OnInit {
     private api: SerivesService,
     private matDialog: MatDialog
 
-  ) {}
+  ) { }
 
   ngOnInit() {
     this.api.cartItems$.subscribe(items => {
@@ -158,7 +168,7 @@ export class ShopComponent implements OnInit {
   }
   buyNowShop() {
     this.matDialog.open(BuyNowComponent, {
-      maxHeight: '600px',
+      maxHeight: '800px',
       width: '900px',
       data: this.cartItems
     })
