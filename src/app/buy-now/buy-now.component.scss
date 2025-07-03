@@ -1,5 +1,4 @@
 .main {
-
     background: rgba(184, 217, 235, 0.4);
     max-height: 82vh;
     position: relative;
@@ -26,41 +25,34 @@
 
         }
     }
- .input_area{
-    .total{
+
+    .input_area {
+        .total {
+            display: flex;
+            justify-content: space-between;
+        }
+    }
+
+    .close_dialog {
+        width: 100%;
         display: flex;
-        justify-content: space-between;
-    }
- }
+        justify-content: end;
 
+        button {
+            width: fit-content;
+            padding: 7px 42px;
+            background: rgba(184, 217, 235, 0.5);
+            border-radius: 10px;
+            font-size: small;
+            color: #58b4e4;
 
+            &:hover {
+                background: rgba(184, 217, 235, 0.8);
+            }
+        }
 
-
- .close_dialog {
-
-    width: 100%;
-display: flex;
-justify-content: end;
-
-   
-
-    button{
-    width: fit-content;
-    padding: 7px 42px;
-    background: rgba(184, 217, 235, 0.5);
-    border-radius: 10px;
-    font-size: small;
-    color: #58b4e4;
-    &:hover {
-        background: rgba(184, 217, 235, 0.8);
     }
 }
-
-}
-}
-
-
-
 
 ::ng-deep.mat-horizontal-stepper-header-container {
     position: sticky;
@@ -76,10 +68,10 @@ justify-content: end;
 
 /////////////////////////////////////////step2////////////////////////////////////////////
 
-.main_personal{
+.main_personal {
 
-  
-       .loop_personal{
+
+    .loop_personal {
         width: 100px;
         height: 100px;
         align-items: center;
@@ -87,25 +79,31 @@ justify-content: end;
         display: flex;
         border-radius: 50%;
         border: 2px solid #58b4e4;
-        img{
+
+        img {
             width: max-content;
             align-items: center;
             transform: scale(2.1);
         }
     }
-    .card_option{
-        .cards{
-            .Dcard,.Ccard{
+
+    .card_option {
+        .cards {
+
+            .Dcard,
+            .Ccard {
                 padding: 5px 15px;
-                h5{
+
+                h5 {
                     margin-bottom: 0px;
                 }
             }
         }
     }
-    input{
+
+    input {
         border: none;
         border-bottom: 1px solid #58b4e4;
-        --tw-ring-shadow:none;
+        --tw-ring-shadow: none;
     }
 }
