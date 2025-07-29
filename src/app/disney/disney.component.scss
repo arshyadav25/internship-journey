@@ -42,21 +42,11 @@
         // position: absolute;
         display: flex;
         height: 100vh;
-  
         left: 0;
       }
     }
   }
-  
-  .onlyshadow {
-    box-shadow: 29px 0px 368px 322px rgb(0, 0, 0);
-    position: absolute;
-    display: flex;
-    height: 100vh;
-    // z-index: 1;
-    left: 0;
-  }
-  
+
   .header {
     display: flex;
     align-items: center;
@@ -195,7 +185,6 @@
   }
   
   .second {
-   
     background-image: url(../../assets/image/photo-1496347646636-ea47f7d6b37b.avif);
     width: 100%;
     height: 100%;
@@ -206,12 +195,7 @@
       justify-content: center;
       align-items: center;
     }
-  
-    //    position: sticky;
-    //    top: 0;
-    // background-image: url(../../assets/photo-1496347646636-ea47f7d6b37b.webp);
   }
-  
   .data {
     display: flex;
   }
@@ -283,17 +267,6 @@
     width: 50%;
   }
   
-  // .img3 {
-  
-  //     // &:hover{
-  //     //     cursor: pointer;
-  //     //     transform: scale(1.4);
-  //     //     border-radius: 10px;
-  //     // height:100%;
-  //     // position: absolute;
-  //     // }
-  // }
-  
   .boximg {
     display: flex;
   }
@@ -302,26 +275,17 @@
     color: rgb(0, 0, 0);
   }
   
-  // .headingtd{
-  //     display: flex;
-  //     justify-content: ;
-  
-  // }
-  
   .img4 {
     width: 219px;
     height: 316px;
-    // border-radius: 20px;
   }
   
   .image2 {
-    // padding-top: 2rem;
     display: flex;
     position: relative;
     width: 100%;
     gap: 1.5rem;
     background: black;
-    /* overflow: auto; */
     overflow-y: hidden;
     overflow-x: auto;
     @media screen and (max-width: 768px) {
@@ -391,26 +355,21 @@
     flex-direction: column;
     width: 100%;
     transform: scale(1.5);
-    // margin: 14px;
     background: rgb(0, 0, 0);
     justify-content: center;
     align-items: center;
   }
-  
   .img6 {
     width: 82px;
     height: 231px;
   }
-  
   //hover effect
-  
   .hoverbox {
     .hoverimage {
       display: none;
     }
   
     .imagehover {
-      // display: none;
       display: flex;
       width: 11.5rem;
       height: 100%;
@@ -421,15 +380,12 @@
         display: flex;
         transform: scaleX(1.5 );
         z-index: 1;
-  
-        // width: 300px;
       }
     }
   }
   
   .headlistimg1 {
     position: relative;
-  
     @media screen and (max-width: 768px) {
       display: flex;
       flex-direction: column;
@@ -440,7 +396,6 @@
   }
   .zero {
     position: absolute;
-  
     @media screen and (max-width: 768px) {
       display: flex;
       color: wheat;
@@ -460,13 +415,11 @@
       font-size: 18px;
     }
   }
-  
   .prev1 {
     position: absolute;
     left: 1px;
     z-index: 1;
     bottom: 8rem;
-    /* height: 100%; */
     font-size: 2rem;
   }
   .next1 {
